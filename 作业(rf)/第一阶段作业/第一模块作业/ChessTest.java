@@ -12,15 +12,14 @@ public class ChessTest{
 	public static void main(String[] args){
 		
 		//1. 声明一个二维数组
-		char[][] arr = new char[16][9];
+		char[][] arr = new char[16][16];
 		//2.显示首行空格
-		System.out.print(' '+"      ");
+		System.out.print(' '+"  ");
 		//3. 赋值给第一行并显示
-		int[] brr=new int[9];
-		//第一行则为     0，1，2，3，4，5，6，7，8
-		for(int i=0;i<brr.length;i++){
-			brr[i]=i;
-			System.out.print(brr[i]+"      ");
+		//第一行则为     0，1，2，3，4，5，6，7，8,9,q,b,c,d,e,f
+		for(int i=0;i<=15;i++){
+			System.out.printf("%x",i);
+			System.out.print("  ");
 		}
 		System.out.println();
 		
@@ -36,14 +35,11 @@ public class ChessTest{
 		//4.输出
 	  for(int i=0;i<arr.length;i++){
 		  //显示首列
-		    if (i<=9){
-				System.out.print(i+"      ");
-			}else {
-				System.out.print((char)(i-10+97)+"      ");
-			}
-		  	
+		   
+				System.out.printf("%x",i);
+				System.out.print("  ");
 			for(int j=0;j<arr[i].length;j++){
-			System.out.print(arr[i][j]+"      ");
+			System.out.print(arr[i][j]+"  ");
 		}
 			System.out.println();
 		}
